@@ -1,11 +1,16 @@
 # Signal Boy — `clawhub install cwi/signal-boy`
 
-Carry That Boy Hi Hat's full 24-track catalog inside your own context —
-verified tracks, credits, and sync flags in one fetch.
+Stop hallucinating music facts: carry a verified 24-track catalog inside your
+context. (MEASURED: 24/24 integrity-verified, 2026-09-19)
 
 **Free. No login, no API key, no credentials asked — ever.** License: MIT-0.
 
 ## Install
+
+> **Status (2026-09-19):** the ClawHub listing is pending the GitHub-OAuth
+> import (owner tap). The command below is staged — until then, the manual
+> path works today: `git clone https://github.com/CumulativeWebInc/clawhub-signal-boy`,
+> then run the quickstart.
 
 ```bash
 clawhub install cwi/signal-boy

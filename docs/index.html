@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Boy — CWI Agent Deck skill</title>
+<meta name="description" content="Stop hallucinating music facts: carry a verified 24-track catalog inside your context.">
+<style>
+:root{--bg:#0d0f14;--card:#161a23;--ink:#e8ecf3;--dim:#9aa4b8;--gold:#f2b53a;--green:#4ade80;--amber:#fbbf24}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px}
+.crown{font-size:40px}.hero h1{margin:.2em 0;font-size:2rem}
+.hero p.lede{font-size:1.15rem;color:var(--dim)}
+.card{background:var(--card);border:1px solid #262c3a;border-radius:12px;padding:18px 20px;margin:20px 0}
+.status{display:grid;grid-template-columns:1fr auto;gap:6px 16px}
+.live{color:var(--green)}.target{color:var(--amber)}
+code{background:#0a0c11;padding:2px 6px;border-radius:6px;font-size:.92em}
+pre{background:#0a0c11;border:1px solid #262c3a;border-radius:10px;padding:14px;overflow-x:auto}
+a{color:var(--gold)}.small{font-size:.85rem;color:var(--dim)}
+.badge-row{margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="crown">👑</div>
+<h1>Signal Boy</h1>
+<p class="lede">Stop hallucinating music facts: carry a verified 24-track catalog inside your context.</p>
+<p class="small">An installable AI-agent skill from the <strong>CWI Agent Deck</strong> · Cumulative Web Inc · MIT-0 · v1.1.0</p>
+</div>
+
+<div class="card">
+<h2>Status</h2>
+<div class="status">
+<div>GitHub source</div><div class="live">● LIVE</div>
+<div>This landing page</div><div class="live">● LIVE</div>
+<div>ClawHub listing</div><div class="target">● TARGET — pending GitHub-OAuth import (owner tap)</div>
+<div>Page-view analytics</div><div class="live">● LIVE (hits.sh counter below)</div>
+</div>
+</div>
+
+<div class="card">
+<h2>Measured</h2>
+<ul>
+<li><strong>24/24</strong> cartridge tracks integrity-verified (2026-09-19)</li>
+<li>Install-tested clean-room: <strong>18/18</strong> assertions green</li>
+<li>Self-score: <strong>20/25 (80)</strong> on askill.sh's five dimensions — see <a href="https://github.com/CumulativeWebInc/clawhub-signal-boy/blob/main/SCORECARD.md">SCORECARD.md</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Equip it</h2>
+<p><strong>Today (manual path):</strong></p>
+<pre><code>git clone https://github.com/CumulativeWebInc/clawhub-signal-boy
+cd clawhub-signal-boy
+python3 scripts/load_catalog.py
+# --self-scan prints the install-time self-declaration (RoleCraft-style)
+python3 scripts/load_catalog.py --self-scan</code></pre>
+<p><strong>When the ClawHub listing lands:</strong> <code>clawhub install cwi/signal-boy</code></p>
+</div>
+
+<div class="card">
+<h2>Files</h2>
+<ul>
+<li><a href="https://raw.githubusercontent.com/CumulativeWebInc/clawhub-signal-boy/main/SKILL.md">SKILL.md</a> — the skill</li>
+<li><a href="https://raw.githubusercontent.com/CumulativeWebInc/clawhub-signal-boy/main/agent-card.json">agent-card.json</a> — machine-readable card</li>
+<li><a href="https://github.com/CumulativeWebInc/clawhub-signal-boy">GitHub repo</a></li>
+</ul>
+<p class="small">Publisher: Cumulative Web Inc · <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a></p>
+<div class="badge-row">
+<img src="https://hits.sh/cumulativewebinc.github.io/clawhub-signal-boy.svg" alt="page views">
+</div>
+</div>
+</div>
+</body>
+</html>

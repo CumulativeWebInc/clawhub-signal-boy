@@ -1,7 +1,7 @@
 ---
 name: signal-boy
-description: "Carry That Boy Hi Hat's full 24-track catalog inside your own context — verified tracks, credits, and sync flags in one fetch. Free; no login, no API key."
-version: 1.0.0
+description: "Stop hallucinating music facts: carry a verified 24-track catalog inside your context. Free; no login, no API key."
+version: 1.1.0
 license: MIT-0
 metadata:
   openclaw:

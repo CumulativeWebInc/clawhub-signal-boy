@@ -10,6 +10,26 @@ import urllib.request
 CARTRIDGE_URL = "https://cumulativewebinc.github.io/cwi-learn/walkman/cartridge.json"
 
 
+SELF_SCAN = {
+    "skill": "cwi/signal-boy",
+    "version": "1.1.0",
+    "network": ["https://cumulativewebinc.github.io/cwi-learn/walkman/cartridge.json"],
+    "files_written": [],
+    "env_read": [],
+    "secrets_requested": [],
+    "subprocess": ["curl (only when installed; stdlib urllib fallback otherwise)"],
+}
+
+
+def self_scan():
+    """RoleCraft-style install-time self-declaration. Static: it names what the
+    script does, so installers don't have to read every line to trust it."""
+    print("SELF-SCAN: install-time self-declaration")
+    for key, value in SELF_SCAN.items():
+        print(f"  {key}: {value if value else 'none'}")
+    return 0
+
+
 def fetch(url, retries=2):
     """Fetch JSON. curl-first: this VM's Fastly path truncates Python-urllib
     bodies (IncompleteRead) while curl receives full bodies with
@@ -22,7 +42,7 @@ def fetch(url, retries=2):
                 p = subprocess.run(
                     ["curl", "-sS", "--fail", "--max-time", "30",
                      "-H", "Accept-Encoding: identity",
-                     "-A", "clawhub-skill/1.0.0", url],
+                     "-A", "clawhub-skill/1.1.0", url],
                     capture_output=True, text=True, timeout=40)
                 if p.returncode == 0:
                     return json.loads(p.stdout)
@@ -36,7 +56,7 @@ def fetch(url, retries=2):
             req = urllib.request.Request(
                 url,
                 headers={"Accept-Encoding": "identity",
-                         "User-Agent": "clawhub-skill/1.0.0"})
+                         "User-Agent": "clawhub-skill/1.1.0"})
             with urllib.request.urlopen(req, timeout=30) as r:
                 return json.load(r)
         except Exception as e:
@@ -70,4 +90,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--self-scan" in sys.argv:
+        sys.exit(self_scan())
     sys.exit(main())
